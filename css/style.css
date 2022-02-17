@@ -1,0 +1,116 @@
+/*! Default styles */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: rgb(230, 219, 219);
+}
+
+/*! Started Gallery Section */
+.gallery-section {
+  height: 100vh;
+  display: flex;
+  font-family: sans-serif;
+}
+
+.tech-description,
+.tech-gallery {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech-description {
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+  background-color: #4c4e50;
+  color: #ffffff;
+}
+
+.tech-description h1 {
+  padding: 11px;
+  font-size: 42px;
+}
+
+.tech-description p {
+  font-size: 22px;
+}
+
+.gallery-highlight {
+  width: 80%;
+  height: 400px;
+}
+
+.tech-preview {
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+  width: 80%;
+  border: 2px solid #7a7d80;
+}
+
+.tech-preview img {
+  width: 33.33333333%;
+  height: 100px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.tech-preview img:hover {
+  opacity: 1;
+  transform: scale(1.07);
+}
+
+img.tech-active {
+  opacity: 1;
+}
+
+@media screen and (max-width: 992px) {
+  .gallery-highlight {
+    height: 300px;
+  }
+  .tech-description h1 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gallery-section {
+    flex-direction: column;
+    height: auto;
+  }
+  .tech-description,
+  .tech-gallery  {
+    width: 100%;
+  }
+  .tech-description {
+    clip-path: none;
+    padding: 25px 0;
+    margin-bottom: 25px;
+  }
+  .tech-description h1 {
+    font-size: 30px;
+  }
+  .tech-description p {
+    font-size: 20px;
+  }
+  .gallery-highlight ,
+  .tech-preview {
+    width: 90%;
+  }
+  .gallery-highlight {
+    height: 250px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .tech-description h1 {
+    font-size: 25px;
+  }
+}
+
+/*! Ended Gallery Section */
